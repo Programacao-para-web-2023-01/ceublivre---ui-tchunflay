@@ -2,31 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .header {
   height: 20vh;
-  background: #9D278B;
+  background: #9d278b;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 60px;
+  position: sticky;
+  top: 0px;
 }
 
-.search-button{
+.search-button {
   width: 65px;
   height: 55px;
-  background: #EAE5E5;
+  background: #eae5e5;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.search-button:hover{
-  background: #D2C6C6;
+.search-button:hover {
+  background: #d2c6c6;
 }
 
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  flex-direction: row;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__viewport {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/*body {
+  overflow: hidden;
+}
+
+.scrollable {
+  overflow: scroll;
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
