@@ -7,7 +7,7 @@ import { CarouselCardProps } from "../models/carousel_card_props";
 export default function CarouselCard({ img, name }: CarouselCardProps) {
   return (
     <Link href={"/"}>
-      <div className="flex flex-col w-[205px] h-[239] items-center gap-4">
+      <div className="flex flex-col w-[254px] h-[288px] items-center gap-4 p-12">
         <div>
           <Image src={img} alt={name} height={196} className="rounded-[50%]" />
         </div>

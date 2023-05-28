@@ -17,13 +17,14 @@ const Carousel = ({ children, ...options }: Props) => {
 
   return (
     <div className="embla">
+        <CarouselPrev canScrollPrev={canScrollPrev} onPrev={()=> emblaApi?.scrollPrev()}></CarouselPrev>         
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             {children}
           </div>
-        </div>
-        <CarouselPrev canScrollPrev={canScrollPrev} onPrev={()=> emblaApi?.scrollPrev()}></CarouselPrev>
+        </div>       
         <CarouselNext canScrollNext={canScrollNext} onNext={()=> emblaApi?.scrollNext()}></CarouselNext>
+        
       </div>
   );
 };
