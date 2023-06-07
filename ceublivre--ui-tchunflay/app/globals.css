@@ -41,6 +41,7 @@
 .embla__container {
   display: flex;
   flex-direction: row;
+  flex-basis: fit-content;
   width: 84%;
 }
 

@@ -10,6 +10,7 @@ import { SearchBar } from "./components/search-bar";
 import { CarouselCardProps } from "./models/carousel_card_props";
 import CategoryCarousel from "./components/category-carousel";
 import CarouselCard from "./components/carousel-card";
+import Footer from "./components/footer";
 
 export default function Home() {
   let x = 0;
@@ -148,8 +149,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="scrollable">
-        <div className="flex flex-row px-24 py-12 gap-11 justify-center">
+      <div className="px-24">
+        <div className="flex py-12 flex-row gap-11 justify-center">
           <ImageLink
             path="/"
             src={BigSale}
@@ -179,7 +180,7 @@ export default function Home() {
         <div className="text-4xl">Categorias</div>
 
         <div className="self-center flex flex-row">
-          <CategoryCarousel loop slidesToScroll={'auto'}>
+          <CategoryCarousel loop slidesToScroll={"auto"}>
             {categories.map((ctg, i) => {
               return (
                 <CarouselCard
@@ -196,7 +197,7 @@ export default function Home() {
         <div className="text-4xl">Recomendados</div>
 
         <div className="self-center flex flex-row">
-          <CategoryCarousel loop>
+          <CategoryCarousel loop slidesToScroll={"auto"}>
             {categories.map((ctg, i) => {
               return (
                 <CarouselCard
@@ -212,7 +213,7 @@ export default function Home() {
         <div className="text-4xl">Ofertas do Dia</div>
 
         <div className="self-center flex flex-row">
-          <CategoryCarousel slidesToScroll={5} loop={false}>
+          <CategoryCarousel slidesToScroll={"auto"} loop>
             {categories.map((ctg, i) => {
               return (
                 <CarouselCard
@@ -225,7 +226,18 @@ export default function Home() {
             })}
           </CategoryCarousel>
         </div>
+
+        <div className="py-9">
+          <ImageLink
+            src={MostSold}
+            path={"/"}
+            width={1360}
+            height={248}
+            alt={"Banner de mais vendidos"}
+          />
+        </div>
       </div>
+      <Footer />
     </main>
   );
 }
