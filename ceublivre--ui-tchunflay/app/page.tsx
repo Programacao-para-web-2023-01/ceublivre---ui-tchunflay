@@ -1,19 +1,12 @@
-import { FaShoppingCart } from "react-icons/fa";
-import { HiUserCircle } from "react-icons/hi2";
-import { MdFavorite } from "react-icons/md";
 import BigSale from "./assets/bigsale.png";
 import MostSold from "./assets/most-sold.jpg";
 import News from "./assets/news.png";
-import IconLink from "./components/icon-link";
-import ImageLink from "./components/image-link";
-import { SearchBar } from "./components/search-bar";
-import { CarouselCardProps } from "./models/carousel_card_props";
-import CategoryCarousel from "./components/category-carousel";
 import CarouselCard from "./components/carousel-card";
-import Footer from "./components/footer";
+import CategoryCarousel from "./components/category-carousel";
+import ImageLink from "./components/image-link";
+import { CarouselCardProps } from "./models/carousel_card_props";
 
 export default function Home() {
-  let x = 0;
   const categories: CarouselCardProps[] = [
     {
       id: 0,
@@ -139,20 +132,10 @@ export default function Home() {
 
   return (
     <main>
-      <div className="header">
-        <SearchBar />
-
-        <div className="flex flex-row justify-evenly">
-          <IconLink path={"/"} Icon={HiUserCircle} />
-          <IconLink path={"/"} Icon={MdFavorite} />
-          <IconLink path={"/"} Icon={FaShoppingCart} size={49} />
-        </div>
-      </div>
-
       <div className="px-24">
         <div className="flex py-12 flex-row gap-11 justify-center">
           <ImageLink
-            path="/"
+            path="/products"
             src={BigSale}
             alt={"Banner de promoção"}
             width={616}
@@ -237,7 +220,6 @@ export default function Home() {
           />
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
