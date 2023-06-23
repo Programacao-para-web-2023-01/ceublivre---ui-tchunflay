@@ -26,9 +26,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-row w-[100vw] h-[100vh]">
+        <SidebarProvider>
+        <Sidebar />
+        </SidebarProvider>
           <div className="w-full">
+            
             <div className="header">
-          <Sidebar />
               <SearchBar />
               <div className="flex flex-row justify-evenly">
                 <IconLink path={"/"} Icon={HiUserCircle} />
@@ -38,7 +41,7 @@ export default function RootLayout({
             </div>
           
 
-          <SidebarProvider>{children}</SidebarProvider>
+          {children}
 
           
           <Footer />

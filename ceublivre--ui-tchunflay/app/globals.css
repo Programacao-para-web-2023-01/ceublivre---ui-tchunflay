@@ -8,19 +8,18 @@
   height: 100vh;
   background-color: #9d278b;
   padding-top: 28px;
+  left: 0px;
 }
 
-.sidebarClosed {
-    background-color: transparent;
-    transition: width 0.3s ease-in-out;
-}
 
 .menuBtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: transparent;
-    padding-left: 20px;
+  /* width: 250px; */
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #9d278b;
+  padding-left: 20px;
 }
 
 .header {
