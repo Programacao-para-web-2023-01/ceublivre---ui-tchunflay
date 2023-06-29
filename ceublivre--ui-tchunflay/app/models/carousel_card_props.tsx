@@ -2,6 +2,6 @@ import { StaticImageData } from "next/image";
 
 export interface CarouselCardProps {
   id: number
-  img: StaticImageData;
+  img: string
   name: string;
 }

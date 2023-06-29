@@ -1,11 +1,11 @@
 export interface Product {    
     id: number
-    category: String
-    brand: String
-    name: String
-    description: String
-    rate: number | null
+    category: string
+    brand: string
+    p_name: string
+    description: string
+    rate: number
     price: number
-    image: String
+    image: string
 
 }

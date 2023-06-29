@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="bg-store-purple w-full px-24 py-12 flex flex-row gap-6 text-[white]">
+    <div className="bg-store-purple w-[100vw] px-24 py-12 flex flex-row gap-6 text-[white]">
       <div className="flex flex-col justify-around">
         <a href={"/"} className="hover:underline">
           Sobre nós

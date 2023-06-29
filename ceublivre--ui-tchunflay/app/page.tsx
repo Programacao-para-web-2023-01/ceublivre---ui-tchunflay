@@ -1,134 +1,21 @@
+"use client"
+import { useEffect, useState } from "react";
 import BigSale from "./assets/bigsale.png";
 import MostSold from "./assets/most-sold.jpg";
 import News from "./assets/news.png";
 import CarouselCard from "./components/carousel-card";
 import CategoryCarousel from "./components/category-carousel";
 import ImageLink from "./components/image-link";
-import { CarouselCardProps } from "./models/carousel_card_props";
+import { Category } from "./models/category";
+import { getCategories } from "./getCategories";
 
 export default function Home() {
-  const categories: CarouselCardProps[] = [
-    {
-      id: 0,
-      img: BigSale,
-      name: `categoria 0`,
-    },
-    {
-      id: 1,
-      img: BigSale,
-      name: "categoria 1",
-    },
-    {
-      id: 2,
-      img: BigSale,
-      name: "categoria 2",
-    },
-    {
-      id: 2,
-      img: BigSale,
-      name: "categoria 3",
-    },
-    {
-      id: 3,
-      img: BigSale,
-      name: "categoria 4",
-    },
-    {
-      id: 4,
-      img: BigSale,
-      name: "categoria 5",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-    {
-      id: 5,
-      img: BigSale,
-      name: "categoria 6",
-    },
-  ];
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    const data = getCategories();
+    data.then((data) => setCategories(data));
+  });
 
   return (
     <main>
@@ -170,40 +57,7 @@ export default function Home() {
                   key={i}
                   id={ctg.id}
                   img={ctg.img}
-                  name={ctg.name}
-                ></CarouselCard>
-              );
-            })}
-          </CategoryCarousel>
-        </div>
-
-        <div className="text-4xl">Recomendados</div>
-
-        <div className="self-center flex flex-row">
-          <CategoryCarousel loop slidesToScroll={"auto"}>
-            {categories.map((ctg, i) => {
-              return (
-                <CarouselCard
-                  id={ctg.id}
-                  img={ctg.img}
-                  name={ctg.name}
-                ></CarouselCard>
-              );
-            })}
-          </CategoryCarousel>
-        </div>
-
-        <div className="text-4xl">Ofertas do Dia</div>
-
-        <div className="self-center flex flex-row">
-          <CategoryCarousel slidesToScroll={"auto"} loop>
-            {categories.map((ctg, i) => {
-              return (
-                <CarouselCard
-                  key={i}
-                  id={ctg.id}
-                  img={ctg.img}
-                  name={ctg.name}
+                  name={ctg.C_name}
                 ></CarouselCard>
               );
             })}

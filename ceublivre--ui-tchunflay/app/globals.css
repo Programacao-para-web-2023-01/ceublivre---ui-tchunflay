@@ -2,19 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.sidebar {
-  width: 250px;
-  transition: width 0.3s ease-in-out;
-  height: 100vh;
+.MuiDrawer-paper {
   background-color: #9d278b;
-  padding-top: 28px;
-  left: 0px;
+  color: white;
+  font-size: 1.125rem/* 18px */;
+  line-height: 1.75rem/* 28px */;
+  font-weight: 500;
+  text-decoration: none;
 }
 
+.MuiLink-root {
+  text-decoration: none;
+  color: white;
+
+}
 
 .menuBtn {
-  /* width: 250px; */
-  height: 20vh;
   display: flex;
   flex-direction: row;
   align-items: center;
